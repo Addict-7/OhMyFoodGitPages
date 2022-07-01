@@ -1,0 +1,602 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.header a {
+  position: absolute;
+  left: 5%;
+  bottom: 13px;
+  color: black;
+  font-size: 20px;
+}
+.header__logo {
+  width: 150px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.header__searchbar {
+  width: 100%;
+  background-color: rgb(212, 209, 209);
+  box-shadow: 0 2px 2px inset rgba(0, 0, 0, 0.1);
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.header__icone {
+  font-size: 16px;
+  color: rgb(61, 61, 61);
+  padding-left: 0px;
+  padding-right: 5px;
+}
+.header__champ {
+  width: 130px;
+  background-color: rgb(212, 209, 209);
+  border: 1px solid transparent;
+}
+.header__champ::placeholder {
+  text-align: center;
+  font-weight: bold;
+  color: rgb(61, 61, 61);
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  background-color: #3b3939;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-size: 20px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+footer img {
+  filter: invert(100%);
+}
+footer ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  margin-top: 0;
+}
+footer li {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .about {
+    text-align: center;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes appear {
+  0% {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes disappear {
+  0% {
+    transform: translateY(0%);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100%);
+    opacity: 0.8;
+  }
+}
+body {
+  width: auto;
+  margin: 0;
+  font-family: "Roboto", "Shrikhand", sans-serif;
+}
+body h1 {
+  font-size: 24px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+  background: linear-gradient(to left, #FF79DA, #9356DC, #99E2D0);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  animation: disappear 0.5s;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+.loading__spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40px;
+  height: 40px;
+  font-size: 40px;
+}
+
+.explore {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(233, 233, 233);
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+.explore__text {
+  width: 80%;
+}
+.explore__text p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #3b3939;
+}
+.explore__text h1 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.explore__btn {
+  width: 250px;
+  border: 0px solid transparent;
+  border-radius: 50px;
+  margin-top: 20px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 16px;
+  font-size: 14px;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.explore__btn:hover {
+  background: linear-gradient(#fface8, #ae80e5);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 20px;
+  margin-top: 30px;
+}
+.functioning__steps {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.functioning__steps:hover i {
+  color: #9356DC;
+}
+.functioning__steps:hover .functioning__label {
+  background-color: #f2eafb;
+}
+.functioning__steps p {
+  display: flex;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  font-size: 15px;
+  background-color: #9356DC;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  left: -10px;
+}
+.functioning__label {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+}
+.functioning__icons {
+  display: flex;
+  align-items: center;
+  color: rgb(131, 131, 131);
+  margin-right: 5%;
+  margin-left: 5%;
+  width: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.restaurant {
+  background-color: rgb(233, 233, 233);
+  margin-top: 50px;
+  padding-top: 20px;
+}
+.restaurant h2 {
+  margin-left: 5%;
+}
+.restaurant h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.restaurant p {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+.restaurant a {
+  text-decoration: none;
+  color: black;
+}
+.restaurant__bloc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 50px;
+}
+.restaurant__card {
+  position: relative;
+  width: 100%;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+.restaurant__image1 {
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.restaurant__image2 {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.restaurant__image3 {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.restaurant__image4 {
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.restaurant__image1, .restaurant__image2, .restaurant__image3, .restaurant__image4 {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: left;
+  border-radius: 25px 25px 0 0;
+}
+.restaurant__infos {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  margin-left: 5%;
+}
+.restaurant__new {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  font-weight: bold;
+  color: rgb(0, 126, 98);
+  border: 1px solid #99E2D0;
+  background-color: #99E2D0;
+  padding: 9px;
+  border-radius: 3px;
+}
+.restaurant__icon i {
+  position: absolute;
+  font-size: 30px;
+  top: 80%;
+  right: 5%;
+  cursor: pointer;
+}
+.restaurant__icon .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.restaurant__icon:hover .fa-solid {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+@media screen and (min-width: 1200px) {
+  .functioning {
+    gap: 30px;
+  }
+  .functioning h2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    font-size: 26px;
+  }
+  .functioning p {
+    font-size: 18px;
+  }
+  .functioning span {
+    font-size: 22px;
+  }
+  .functioning__steps {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  .functioning__label {
+    justify-content: center;
+  }
+  .functioning__icons {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  .restaurant h2 {
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+  .restaurant__bloc {
+    margin-left: 30%;
+    margin-right: 30%;
+    gap: 30px;
+  }
+  .restaurant h3 {
+    font-size: 22px;
+  }
+  .restaurant p {
+    font-size: 18px;
+  }
+}
+.menu {
+  border-radius: 30px 30px 0 0;
+  margin-top: -30px;
+  padding-bottom: 60px;
+  background-color: rgb(233, 233, 233);
+}
+.menu h1 {
+  font-family: "Shrikhand";
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+.menu__image1 {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.menu__image2 {
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.menu__image3 {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.menu__image4 {
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.menu__image1, .menu__image2, .menu__image3, .menu__image4 {
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: left;
+}
+.menu__bloc {
+  padding-bottom: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.menu__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+.menu__icon i {
+  position: absolute;
+  font-size: 30px;
+  cursor: pointer;
+  right: 7%;
+}
+.menu__icon .fa-solid {
+  position: absolute;
+  color: transparent;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 0.4s;
+}
+.menu__icon:hover .fa-solid {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.menu__title {
+  margin-top: 40px;
+}
+.menu__title h2 {
+  font-weight: lighter;
+  text-transform: uppercase;
+  font-size: 18px;
+  border-bottom: 3px solid #99E2D0;
+  width: 50px;
+  height: 30px;
+  position: relative;
+}
+.menu__choices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 18px;
+  overflow: hidden;
+  border: 0px solid transparent;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  animation: appear 1s;
+  animation-fill-mode: both;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.menu__choices:hover .menu__text {
+  transition: 0.4s;
+}
+.menu__choices:hover .menu__btn {
+  transition: 0.4s;
+  margin-right: 0;
+}
+.menu__choices:hover .menu__btn i {
+  animation: rotation 0.8s linear;
+}
+.menu__choices:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.menu__choices:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.menu__choices:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.menu__choices:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.menu__choices h3 {
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__choices p {
+  font-size: 14px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__choices i {
+  font-size: 30px;
+}
+.menu__text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__animated {
+  display: flex;
+  flex-direction: row;
+}
+.menu .menu__price {
+  display: flex;
+  align-items: flex-end;
+  padding-right: 20px;
+  margin-left: 0px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.menu__btn {
+  background-color: #99E2D0;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-right: -78px;
+}
+.menu .btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.menu .btn__command {
+  width: 200px;
+  border: 0px solid transparent;
+  border-radius: 50px;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  padding: 16px;
+  font-size: 14px;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+.menu .btn__command:hover {
+  background: linear-gradient(#fface8, #ae80e5);
+  box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+@media screen and (min-width: 1200px) {
+  .menu h1 {
+    font-size: 30px;
+  }
+  .menu h2 {
+    font-size: 26px;
+  }
+  .menu h3 {
+    font-size: 22px;
+  }
+  .menu p {
+    font-size: 18px;
+  }
+  .menu__btn {
+    padding: 24px;
+  }
+  .menu__name {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  .menu i {
+    margin-right: 30%;
+  }
+  .menu__title {
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  .menu .btn__command {
+    font-size: 22px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

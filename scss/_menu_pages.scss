@@ -1,0 +1,215 @@
+.menu {
+    border-radius: 30px 30px 0 0;
+    margin-top: -30px;
+    padding-bottom: 60px;
+    background-color: rgb(233, 233, 233);
+    h1 {
+        font-family: 'Shrikhand';
+        margin-bottom: 0px;
+        margin-top: 40px;
+    }
+    &__image1 {
+        background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    }
+    &__image2 {
+        background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    }
+    &__image3 {
+        background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    }
+    &__image4 {
+        background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    }
+    &__image1, &__image2, &__image3, &__image4 {
+        width: 100%;
+        height: 250px;
+        background-size: cover;
+        background-position: left;
+    }
+    &__bloc {
+        padding-bottom: 30px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    &__name {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-top: 40px;
+        i {
+            position: absolute;
+            font-size: 30px;
+            cursor: pointer;
+            right: 7%;
+        }
+        .fa-solid {
+            position: absolute;
+            color: transparent;
+            background-image: linear-gradient($primary-color, $secondary-color);
+            -webkit-background-clip: text;
+            opacity: 0;
+            transition: all 0.4s;
+        }
+        &:hover .fa-solid {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+    }
+
+    &__title {
+        margin-top: 40px;
+        h2 {
+            font-weight: lighter;
+            text-transform: uppercase;
+            font-size: 18px;
+            border-bottom: 3px solid $tertiary-color;
+            width   : 50px;
+            height  : 30px;   
+            position: relative;
+        }
+    }
+    &__choices {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 18px;
+        overflow: hidden;
+        border: 0px solid transparent;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        background-color: white;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        animation: appear 1s;
+        animation-fill-mode: both;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+        &:hover .menu__text {
+            transition: 0.4s;
+            }
+        &:hover .menu__btn {
+            transition: 0.4s;
+            margin-right: 0;
+            i {
+                animation: rotation 0.8s linear;
+            }
+        }
+        @for $i from 1 to 5 {
+            &:nth-child(#{$i}){
+                animation-delay: 0.2s *$i;
+            }
+        }
+        h3 {
+            font-size: 16px;
+            margin-left: 10px;
+            margin-top: 10px;
+            margin-bottom: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p {
+            font-size: 14px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        i {
+            font-size: 30px;
+        } 
+    }
+    &__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__animated {
+        display: flex;
+        flex-direction: row;
+    }
+    .menu__price {
+        display: flex;
+        align-items: flex-end;
+        padding-right: 20px;
+        margin-left: 0px;
+        font-weight: bold;
+        padding-left: 10px;
+    }
+    &__btn {
+        background-color: $tertiary-color;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-right: -78px;
+    }
+    .btn {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        &__command {
+        width: 200px;
+        border: 0px solid transparent;
+        border-radius: 50px;
+        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+        padding: 16px;
+        font-size: 14px;
+        color: white;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+        cursor: pointer;
+        &:hover {
+            background: linear-gradient(lighten($secondary-color, 10%), lighten($primary-color, 10%));
+            box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 0.8);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) 
+
+{ 
+    .menu {
+        h1 {
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 26px;
+        }
+        h3 {
+            font-size: 22px;
+        }
+        p {
+            font-size: 18px;
+        }
+        &__btn {
+            padding: 24px;
+        }
+        &__name {
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+        i {
+            margin-right: 30%;
+        }
+        &__title {
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+        .btn__command {
+            font-size: 22px;
+        }
+    }
+}

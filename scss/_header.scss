@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  a {
+      position: absolute;
+      left: 5%;
+      bottom: 13px;
+      color: black;
+      font-size: 20px;
+  }
+  &__logo {
+      width: 150px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+  }
+  &__searchbar {
+      width: 100%;
+      background-color: rgb(212, 209, 209);
+      box-shadow: 0 2px 2px inset rgb(0 0 0 / 0.1);
+      padding-top: 15px;
+      padding-bottom: 15px;  
+  }
+  &__icone {
+      font-size: 16px;
+      color: rgb(61, 61, 61);
+      padding-left: 0px;
+      padding-right: 5px;
+  }
+  &__champ {
+      width: 130px;
+      background-color: rgb(212, 209, 209);
+      border: 1px solid transparent;
+      &::placeholder {
+          text-align: center;
+          font-weight: bold;
+          color: rgb(61, 61, 61);
+      }
+  }
+}
